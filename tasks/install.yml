@@ -1,0 +1,23 @@
+---
+
+- name: Install Jenkins software
+
+  hosts: jenkins-master
+
+  gather_facts: true
+
+  become: yes
+
+  become_method: sudo
+
+  tags: [jenkins]
+
+  tasks:
+    - name: Update the software package repository
+
+      yum:
+
+        name: '*'
+
+        state: latest
+
