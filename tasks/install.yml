@@ -2,7 +2,7 @@
 
 - name: Install Jenkins software
 
-  hosts: jenkins-master
+  hosts: all
 
   gather_facts: true
 
